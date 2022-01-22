@@ -5,10 +5,11 @@
 import os
 import sys
 import warnings
+from typing import Tuple
 
 warnings.filterwarnings("error", category=Warning)
 
-IGNORE_FILES: tuple[str] = ("netlify.toml",)
+IGNORE_FILES: Tuple[str] = ("netlify.toml",)
 
 INDEX_TEMPLATE: str = f"""
 <!DOCTYPE html>
