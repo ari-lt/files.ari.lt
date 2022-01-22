@@ -15,19 +15,13 @@
 
 [[redirects]]
     from = "/netlify.toml"
-    to = "/404"
+    to = "https://ari-web.xyz/404.files.xyz"
     status = 404
     force = true
 
 [[redirects]]
-    from = "/404"
-    to = "https://ari-web.xyz/404.files.xyz"
-    status = 200
-    force = true
-
-[[redirects]]
     from = "/*"
-    to = "/404"
+    to = "https://ari-web.xyz/404.files.xyz"
     status = 404
     force = false
 
