@@ -9,6 +9,8 @@ files/.../..., remember that they will be public
 
 You could access them though https://files.ari-web.xyz/files/PATH/TO/YOUR/FILE
 
+# Permanent hosting
+
 The files might get removed if they are older than 6 moths, but
 you can specify something like "PLEASE DO NOT DELETE" in the PR, file itself (prefered)
 and/or [SAFE.md](/SAFE.md)
@@ -20,6 +22,7 @@ But...
 - You agree that all of your files are and will stay under [ArArv2 license](/LICENSE)
 - File names cannot include `#`, `?` or any other url unsafe chars
 - Any illegal material will not get hosted
-- Overwrite others files unless they are older than 6 months and have nothing stating that you cannot remove it
+- Don't overwrite other's files unless they are older than 6 months and have nothing stating that you cannot remove it (See [permanent hosting](#Permanent-hosting))
+- Help me remove any illegal or rules evading files because being taken down is not fun
 
 You can host your files by just making a pull request
