@@ -1,5 +1,7 @@
 # [files.ari-web.xyz](https://files.ari-web.xyz)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45b95d96-66aa-4e1d-b966-ce8fa2ed3188/deploy-status)](https://app.netlify.com/sites/files-ari-web-xyz/deploys)
+
 You can host your files here, put them all in
 files/.../..., remember that they will be public
 
@@ -13,4 +15,3 @@ But...
 - File names cannot include `#`, `?` or any other url unsafe chars
 
 You can host your files by just making a pull request
-
