@@ -13,3 +13,8 @@
     status = 404
     force = false
 
+[[redirects]]
+    from = "/favicon.ico"
+    to = "https://ari-web.xyz/favicon.ico"
+    status = 200
+    force = true
