@@ -8,7 +8,9 @@ import warnings
 
 warnings.filterwarnings("error", category=Warning)
 
-INDEX_TEMPLATE: str = """
+IGNORE_FILES: tuple[str] = ("netlify.toml",)
+
+INDEX_TEMPLATE: str = f"""
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,10 +22,11 @@ INDEX_TEMPLATE: str = """
 
     <body>
         <h1>Ari web file index</h1>
+        <i>Ignored files: {', '.join(IGNORE_FILES)}</i>
+        <hr/>
         %s
     </body>
 </html>
-
 """
 
 
@@ -41,7 +44,7 @@ def generate_tree(path: str, html: str = "") -> str:
     """
 
     for file in os.listdir(path):
-        if file.startswith("."):
+        if file.startswith(".") or file in IGNORE_FILES:
             continue
 
         rel = path + "/" + file
