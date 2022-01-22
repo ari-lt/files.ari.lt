@@ -7,3 +7,9 @@
     status = 404
     force = false
 
+[[redirects]]
+    from = "/git"
+    to = "https://ari-web.xyz/gh/files.ari-web.xyz"
+    status = 404
+    force = false
+
