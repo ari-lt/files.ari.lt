@@ -10,4 +10,7 @@ But...
 - You cannot make index.html files
 - You cannot host JavaScript that will run automatically on load
 - You agree that all of your files are and will stay under [ArArv2 license](/LICENSE)
+- File names cannot include `#`, `?` or any other url unsafe chars
+
+You can host your files by just making a pull request
 
