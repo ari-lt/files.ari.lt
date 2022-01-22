@@ -5,6 +5,7 @@
 import os
 import sys
 import warnings
+from subprocess import check_output as check_cmd_output
 from typing import Tuple
 
 warnings.filterwarnings("error", category=Warning)
@@ -19,13 +20,27 @@ INDEX_TEMPLATE: str = f"""
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ari::ari -> files</title>
+
+        <style>
+            * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
+            body {{ padding: 2rem; }}
+            h1 {{ text-align: center; margin: 1em; }}
+            li {{ margin: 0.5em; }}
+            a {{ text-decoration: none; text-shadow: 0px 0px 6px white; }}
+        </style>
     </head>
 
     <body>
-        <h1>Ari web file index</h1>
-        <i>Ignored files: {', '.join(IGNORE_FILES)}</i>
+        <h1><a href='https://ari-web.xyz/'>Ari-web</a> file hosting index</h1>
+
+        <p align='center'>
+            <i>Ignored files: {', '.join(IGNORE_FILES)} | Last built at {check_cmd_output('date').decode()} | <a href='/git'>source code</a></i>
+        </p>
         <hr/>
-        %s
+
+        <div>
+            %s
+        </div>
     </body>
 </html>
 """

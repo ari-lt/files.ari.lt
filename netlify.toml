@@ -4,8 +4,8 @@
 [[redirects]]
     from = "/git"
     to = "https://ari-web.xyz/gh/files.ari-web.xyz"
-    status = 404
-    force = false
+    status = 308
+    force = true
 
 [[redirects]]
     from = "/favicon.ico"
@@ -15,13 +15,19 @@
 
 [[redirects]]
     from = "/netlify.toml"
-    to = "https://ari-web.xyz/404.files.xyz"
+    to = "/404"
     status = 404
     force = true
 
 [[redirects]]
-    from = "/*"
+    from = "/404"
     to = "https://ari-web.xyz/404.files.xyz"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/*"
+    to = "404"
     status = 404
     force = false
 
