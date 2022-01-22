@@ -21,6 +21,8 @@ INDEX_TEMPLATE: str = f"""
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ari::ari -> files</title>
 
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css">
+
         <style>
             * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
             body {{ padding: 2rem; }}
