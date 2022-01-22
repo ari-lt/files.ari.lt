@@ -22,7 +22,7 @@ But...
 - You agree that all of your files are and will stay under [ArArv2 license](/LICENSE)
 - File names cannot include `#`, `?` or any other url unsafe chars
 - Any illegal material will not get hosted
-- Don't overwrite other's files unless they are older than 6 months and have nothing stating that you cannot remove it (See [permanent hosting](#Permanent-hosting))
+- Don't overwrite other's files unless they are older than 6 months and have nothing stating that you cannot remove it (See [permanent hosting](#permanent-hosting))
 - Help me remove any illegal or rules evading files because being taken down is not fun
 
 You can host your files by just making a pull request
