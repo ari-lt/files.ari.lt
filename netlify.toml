@@ -1,3 +1,9 @@
 [build]
     command = "python3 scripts/tree.py"
 
+[[redirects]]
+    from = "/*"
+    to = "https://ari-web.xyz/404.files.xyz"
+    status = 404
+    force = false
+
