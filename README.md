@@ -15,6 +15,8 @@ The files might get removed if they are older than 6 moths, but
 you can specify something like "PLEASE DO NOT DELETE" in the PR, file itself (prefered)
 and/or [SAFE.md](/SAFE.md)
 
+# Hosting rules
+
 But...
 
 - You cannot make index.html files
