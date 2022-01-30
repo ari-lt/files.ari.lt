@@ -24,7 +24,7 @@ INDEX_TEMPLATE: str = f"""
         <meta name="keywords" content="website webdev linux programming ari opensource free cdn file files file-hosting file_hosting git github">
         <meta name="robots" content="follow"/>
 
-        <title>Ari::ari -> files</title>
+        <title>Ari::ari -> Files</title>
 
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css">
 
