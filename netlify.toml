@@ -2,8 +2,8 @@
     command = "python3 scripts/tree.py"
 
 [[redirects]]
-    from = "/git"
-    to = "https://ari-web.xyz/gh/files.ari-web.xyz"
+    from = "/git/*"
+    to = "https://ari-web.xyz/gh/files.ari-web.xyz/:splat"
     status = 308
     force = true
 
