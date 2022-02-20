@@ -4,7 +4,7 @@
 [[redirects]]
     from = "/git/*"
     to = "https://ari-web.xyz/gh/files.ari-web.xyz/:splat"
-    status = 308
+    status = 301
     force = true
 
 [[redirects]]
