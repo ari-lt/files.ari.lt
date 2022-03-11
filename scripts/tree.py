@@ -27,6 +27,7 @@ INDEX_TEMPLATE: str = f"""
         <title>Ari::ari -> Files</title>
 
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css">
+        <link rel="manifest" href="/manifest.json" />
 
         <style>
             * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
