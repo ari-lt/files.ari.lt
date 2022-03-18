@@ -30,6 +30,7 @@ INDEX_TEMPLATE: str = f"""
         <link rel="manifest" href="/manifest.json" />
 
         <style>
+            :root {{ color-scheme: dark; }}
             * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
             body {{ padding: 2rem; }}
             h1 {{ text-align: center; margin: 1em; }}
