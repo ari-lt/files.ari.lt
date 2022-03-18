@@ -44,4 +44,5 @@
         X-XSS-Protection = "1; mode=block"
         Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
         Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "GET"
 
