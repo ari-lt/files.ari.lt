@@ -29,6 +29,8 @@ INDEX_TEMPLATE: str = f"""
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css">
         <link rel="manifest" href="/manifest.json" />
 
+        <meta name="color-scheme" content="dark">
+
         <style>
             :root {{ color-scheme: dark; }}
             * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
