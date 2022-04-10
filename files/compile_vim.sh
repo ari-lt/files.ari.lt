@@ -14,6 +14,7 @@ main() {
         --with-x --enable-pythoninterp=yes --enable-python3interp=yes --with-python-command=python2 \
         --with-python3-command=python3
 
+    make -j69
 }
 
 main "$@"
