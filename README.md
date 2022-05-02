@@ -19,7 +19,8 @@ You could access them though https://files.ari-web.xyz/files/PATH/TO/YOUR/FILE
 
 # Permanent hosting
 
-The files might get removed if they are older than 6 moths, but
+The files might get removed or overwritten
+if they are older than 1 moth (90 days), but
 you can specify something like "PLEASE DO NOT DELETE" in the PR, file itself (prefered)
 and/or [SAFE.md](/SAFE.md)
 
