@@ -13,7 +13,7 @@ main() {
     cd baz
 
     echo 'Installing baz'
-    su -c 'install -Dm755 baz /usr/bin'
+    sudo install -Dm755 baz /usr/bin
 
     echo 'Setting baz up'
     baz setup
