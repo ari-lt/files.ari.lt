@@ -13,7 +13,7 @@ main() {
     cd baz
 
     echo 'Installing baz'
-    sudo install -Dm755 baz /usr/bin
+    ${__BASH_RUNAS:-sudo} install -Dm755 baz /usr/bin
 
     echo 'Setting baz up'
     baz setup
