@@ -5,6 +5,9 @@ set -e
 main() {
     echo 'Setting up baz'
 
+    echo 'Pre-cleanup'
+    rm -rf baz
+
     echo 'Cloning repository'
     git clone https://ari-web.xyz/gh/baz
     cd baz
