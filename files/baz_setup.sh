@@ -20,8 +20,11 @@ main() {
 
     echo 'Adding lines to bashrc'
     tee -a ~/.bashrc <<EOF
+# Load baz
 export BAZ_LOADER_ENABLED=true
-[ -f "\$HOME/.local/share/baz/loader.sh" ] && source "\$HOME/.local/share/baz/loader.sh"
+_baz_loader="$HOME/.local/share/baz/loader.sh"
+
+[ -f "\$_baz_loader" ] && source "\$_baz_loader"
 EOF
 
     echo 'Adding completions'
