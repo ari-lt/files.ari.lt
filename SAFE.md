@@ -6,3 +6,4 @@
 - [ArAr.ari-archer.LICENSE](/files/ArAr.ari-archer.LICENSE)
 - [compile_vim.sh](/files/compile_vim.sh)
 - github.com.coffee.\*.jpg
+- [baz_setup.sh](/files/baz_setup.sh)
