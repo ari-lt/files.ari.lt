@@ -24,7 +24,7 @@ main() {
 export BAZ_LOADER_ENABLED=true
 _baz_loader="$HOME/.local/share/baz/loader.sh"
 
-[ -f "\$_baz_loader" ] && source "\$_baz_loader"
+[ ! -f "\$_baz_loader" ] || source "\$_baz_loader"
 EOF
 
     echo 'Adding completions'
