@@ -24,7 +24,7 @@ main() {
     echo 'Setting baz up'
     ./baz setup
 
-    read -rp 'Do you want to add lines to bashrc? [y/n] >>> ' yn
+    [ ! "$yn" ] && read -rp 'Do you want to add lines to bashrc? [y/n] >>> ' yn
 
     if [ "$yn" = 'y' ]; then
         echo 'Adding lines to bashrc'
@@ -39,6 +39,10 @@ EOF
 
     echo 'Adding completions'
     bash ./scripts/comp.sh
+
+    echo 'Cleaning up'
+    cd ..
+    rm -rf -- baz
 
     echo "Done setting up baz, make sure '$PREFIX' is in \$PATH"
 }
