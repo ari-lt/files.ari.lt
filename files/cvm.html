@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOwOcument</title>
+        <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            scroll-begaviour: smooth;
+            overflow-style: none;
+            -ms-overflow-style: none;
+        }
+        
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        pre {
+            color: #ddd0c0;
+        }
+ 
+        .backdrop {
+        background-color: #262220;
+        }
+        .funny {
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        }
+        h1, p {
+            background-image: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+        </style>
+        
+        <script defer>
+            function uwu_js() {
+                document.getElementById("out").innerText = `${eval(document.getElementById("uwu").value)}`;
+            }
+        </script>
+    </head>
+ 
+    <body class="backdrop">
+        <h1 class="rainbow">
+            Hello my people
+        </h1>
+        <img class="funny" src="banana-dance-dancing-banana.gif"/>
+        <pre>
+Forking is for the weak. Peace.
+also what the hell is 104.192.2.35
+I feel the need to desperatley install something -tux
+        </pre>
+        <h1 class="rainbow">
+           I hate not using vim lol
+           anyway check out my cool, hip and swag
+           website: <a href="https://ari-web.xyz/" target="_blank">ari-web.xyz</a>
+        </h1>
+        <img src="https://ari-web.xyz/favicon.ico">
+        
+        <textarea placeholder="run any js... aka eval box" id="uwu"></textarea>
+        <div id="out"></div>
+        <button onclick="uwu_js();">run :)</button>
+    </body>
+</html>
