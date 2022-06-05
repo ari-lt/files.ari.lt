@@ -37,6 +37,11 @@
     status = 404
     force = false
 
+# Processing
+[build.processing]
+    skip_processing = true
+# --------------
+
 [[headers]]
     for = "/*"
 
