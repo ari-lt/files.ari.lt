@@ -6,3 +6,4 @@
 - [compile_vim.sh](/files/compile_vim.sh)
 - github.com.coffee.\*.jpg
 - [baz_setup.sh](/files/baz_setup.sh)
+- [blog.ari-web.xyz-enneagram.svg](/files/blog.ari-web.xyz-enneagram.svg)
