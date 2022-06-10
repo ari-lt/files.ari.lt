@@ -20,7 +20,7 @@ main() {
     done
 
     python3 -m pip install --user trash-cli
-    baz install git $COFFEE
+    baz install git $plugins
 }
 
 main "$@"
