@@ -2,8 +2,8 @@
 
 main() {
     ARI_WEB="shortcmd-baz-plugin coloured-man-pages-plugin better-bash-baz-plugin
-             ls-aliases-baz-plugin vifzf-keybinds-baz-plugin yt-dlp-aliases-baz-plugin
-             trash-cli-rm-baz bettercmd-baz-plugin cmdutils-baz-plugin"
+             ls-aliases-baz-plugin yt-dlp-aliases-baz-plugin trash-cli-rm-baz
+             bettercmd-baz-plugin cmdutils-baz-plugin"
 
     COFFEE="coffee.tty-theme coffee.baz-plugin"
 
@@ -19,7 +19,7 @@ main() {
         plugins="$plugins https://github.com/coffee-theme/$coffee"
     done
 
-    python3 -m pip install --user trash-cli
+    ${__BASH_RUNAS:-sudo} apt install trash-cli -y
     baz install git $plugins
 }
 
