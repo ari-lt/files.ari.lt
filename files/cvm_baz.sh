@@ -19,7 +19,8 @@ main() {
         plugins="$plugins https://github.com/coffee-theme/$coffee"
     done
 
-    ${__BASH_RUNAS:-sudo} apt install trash-cli -y
+    python3 -m pip install --user trash-cli
+    echo 'export PATH="$PATH:$HOME/.local/bin' >>"$HOME/.bashrc"
     baz install git $plugins
 }
 
