@@ -20,7 +20,7 @@ main() {
     done
 
     python3 -m pip install --user trash-cli
-    echo 'export PATH="$PATH:$HOME/.local/bin' >>"$HOME/.bashrc"
+    echo 'export PATH="$PATH:$HOME/.local/bin"' >>"$HOME/.bashrc"
     baz install git $plugins
 }
 
