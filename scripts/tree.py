@@ -12,8 +12,7 @@ warnings.filterwarnings("error", category=Warning)
 
 IGNORE_FILES: Tuple[str] = ("netlify.toml",)
 
-INDEX_TEMPLATE: str = f"""
-<!DOCTYPE html>
+INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -22,7 +21,7 @@ INDEX_TEMPLATE: str = f"""
 
         <meta name="description" content="Ari-web file hosting index">
         <meta name="keywords" content="website webdev linux programming ari opensource free cdn file files file-hosting file_hosting git github">
-        <meta name="robots" content="follow"/>
+        <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
 
         <title>Ari::ari -> Files</title>
 
@@ -53,8 +52,7 @@ INDEX_TEMPLATE: str = f"""
             %s
         </div>
     </body>
-</html>
-"""
+</html>"""
 
 
 def generate_tree(path: str, html: str = "") -> str:
