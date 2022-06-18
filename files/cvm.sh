@@ -2,9 +2,7 @@
 
 set -e
 
-s() {
-    ${__BASH_RUNAS:-sudo} "$@"
-}
+s() { ${__BASH_RUNAS:-sudo} "$@"; }
 
 main() {
     # baz
@@ -69,6 +67,16 @@ EOF
     # Vim packages
 
     vim +PackUpdate
+    # Tmux
+
+    s apt install tmux -yqq
+
+    tee -a head.sh <<EOF
+if [ ! "\$TMUX" ] || [ "\$TERM" != 'linux' ]; then
+    tmux -2 -l
+    exit 127
+fi
+EOF
 
     # Kos
 
@@ -86,15 +94,16 @@ vim src/config.h&&INSTALL_MAN=1 USER=root ./scripts/setup.sh
 EOF
     s bash kos.sh
 
-    # Tmux
+    tee -a head.sh <<EOF
+export EDITOR=vim
+export __BASH_RUNAS=kos
+EOF
 
-    s apt install tmux -yqq
+    cat <<EOF
 
-    tee tmux.sh <<EOF
-if [ ! "\$TMUX" ] || [ "\$TERM" != 'linux' ]; then
-    tmux -2 -l
-    exit 127
-fi
+**** Add this to the top of bashrc: ****
+****        source ~/head.sh        ****
+
 EOF
 }
 
