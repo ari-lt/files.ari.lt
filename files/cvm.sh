@@ -42,7 +42,7 @@ EOF
     tee vim.sh <<EOF
 rm -rf vim
 apt purge vim vim-runtime -yqq
-apt install cargo nodejs npm clang gcc ccls python3 python3-pip ruby tcl xorg-dev lua5.4 liblua5.4-dev binutils perl -yqq
+apt install cargo nodejs npm clang gcc ccls python3 python3-pip ruby tcl xorg-dev lua5.4 liblua5.4-dev binutils perl shfmt -yqq
 git clone https://github.com/vim/vim
 cd vim
 wget https://files.ari-web.xyz/files/compile_vim.sh
@@ -52,7 +52,7 @@ EOF
 
     s bash vim.sh
 
-    # Dotfiles
+    # Dotfiles and vim
 
     git clone https://ari-web.xyz/dotfiles
 
@@ -60,9 +60,29 @@ EOF
     cp -r dotfiles/dotfiles/editors/vim ~/.vim
     cp -r dotfiles/dotfiles/config/* ~/.config
 
+    # Vim packages
+
+    vim +PackUpdate
+
+    # Kos
+
+    tee kos.sh <<EOF
+groupadd kos
+usermod -aG kos dartz
+export SUDO_FORCE_REMOVE=yes
+a(){apt -yqq "\$@";}
+a purge sudo&&a update --fix-missing -yqq
+a -yqq install clang pkgconf
+rm -rf kos
+git clone 'https://ari-web.xyz/gh/kos'
+cd kos&&cp completions/kos.bash /usr/share/bash-completion/completions/kos
+vim src/config.h&&INSTALL_MAN=1 USER=root ./scripts/setup.sh
+EOF
+    s bash kos.sh
+
     # Tmux
 
-    s apt install tmux
+    s apt install tmux -yqq
 
     tee tmux.sh <<EOF
 if [ ! "\$TMUX" ] || [ "\$TERM" != 'linux' ]; then
