@@ -29,7 +29,7 @@ EOF
     # Links
 
     tee ln.sh <<EOF
-d(){ rm -rf /root/"$1"&&ln -s /home/dartz/"\$1" /root/"\$1"; }
+d(){ rm -rf /root/"\$1"&&ln -s /home/dartz/"\$1" /root/"\$1"; }
 d .local
 d .bashrc
 d .config
