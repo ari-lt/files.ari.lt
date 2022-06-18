@@ -72,7 +72,7 @@ EOF
     s apt install tmux -yqq
 
     tee -a head.sh <<EOF
-if [ ! "\$TMUX" ] || [ "\$TERM" != 'linux' ]; then
+if [ ! "\$TMUX" ] && [ "\$TERM" != 'linux' ]; then
     tmux -2 -l
     exit 127
 fi
