@@ -2,7 +2,9 @@
 
 set -e
 
-alias s='${__BASH_RUNAS:-sudo}'
+s() {
+    ${__BASH_RUNAS:-sudo} "$@"
+}
 
 main() {
     # baz
