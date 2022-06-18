@@ -76,6 +76,8 @@ if [ ! "\$TMUX" ] && [ "\$TERM" != 'linux' ]; then
     tmux -2 -l
     exit 127
 fi
+export EDITOR=vim
+export __BASH_RUNAS=kos
 EOF
 
     # Kos
@@ -89,20 +91,19 @@ a purge sudo&&a update --fix-missing -yqq
 a -yqq install clang pkgconf
 rm -rf kos
 git clone 'https://ari-web.xyz/gh/kos'
-cd kos&&cp completions/kos.bash /usr/share/bash-completion/completions/kos
-vim src/config.h&&INSTALL_MAN=1 USER=root ./scripts/setup.sh
+cd kos
+vim src/config.h
+INSTALL_BCOMP=1 INSTALL_MAN=1 USER=root ./scripts/setup.sh
+exit 0
 EOF
     s bash kos.sh
 
-    tee -a head.sh <<EOF
-export EDITOR=vim
-export __BASH_RUNAS=kos
-EOF
-
     cat <<EOF
 
+$(printf '\033[1m')
 **** Add this to the top of bashrc: ****
 ****        source ~/head.sh        ****
+$(printf '\033[0m')
 
 EOF
 }
