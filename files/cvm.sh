@@ -84,7 +84,7 @@ EOF
 groupadd kos
 usermod -aG kos dartz
 export SUDO_FORCE_REMOVE=yes
-a(){apt -yqq "\$@";}
+a(){ apt -yqq "\$@"; }
 a purge sudo&&a update --fix-missing -yqq
 a -yqq install clang pkgconf
 rm -rf kos
