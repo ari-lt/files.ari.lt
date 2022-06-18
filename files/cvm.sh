@@ -14,6 +14,12 @@ main() {
     wget 'https://files.ari-web.xyz/files/baz_setup.sh'
     bash baz_setup.sh
 
+    # Baz plugins
+
+    s apt install python3-pip -yqq
+    wget 'https://files.ari-web.xyz/files/cvm_baz.sh'
+    sh cvm_baz.sh
+
     # Furryfox
 
     tee firefox.sh <<EOF
