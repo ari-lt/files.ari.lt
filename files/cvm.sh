@@ -80,6 +80,10 @@ export EDITOR=vim
 export __BASH_RUNAS=kos
 EOF
 
+    # Misc
+
+    s apt purge update-notifier-common -yqq
+
     # Kos
 
     tee kos.sh <<EOF
@@ -94,6 +98,7 @@ git clone 'https://ari-web.xyz/gh/kos'
 cd kos
 vim src/config.h
 INSTALL_BCOMP=1 INSTALL_MAN=1 USER=root ./scripts/setup.sh
+a autopurge
 exit 0
 EOF
     s bash kos.sh
