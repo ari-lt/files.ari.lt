@@ -78,6 +78,11 @@ if [ ! "\$TMUX" ] && [ "\$TERM" != 'linux' ]; then
 fi
 export EDITOR=vim
 export __BASH_RUNAS=kos
+
+sudo() {
+    echo 'Use kos:'
+    echo "kos \$@"
+}
 EOF
 
     # Misc
