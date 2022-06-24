@@ -1,4 +1,7 @@
 .mypy_cache/
 index.html
-!files/
+files/
 
+
+# Local Netlify folder
+.netlify
