@@ -10,7 +10,7 @@ main() {
     s apt install git -yqq
     rm -f baz_setup.sh
     wget 'https://files.ari-web.xyz/files/baz_setup.sh'
-    bash baz_setup.sh
+    yn=y bash baz_setup.sh
 
     # Baz plugins
 
@@ -65,8 +65,8 @@ EOF
     cp -r dotfiles/dotfiles/config/* ~/.config
 
     # Vim packages
+    vim +PlugUpgrade +PlugUpdate +CocUpdate +qa
 
-    vim +PackUpdate
     # Tmux
 
     s apt install tmux -yqq
@@ -96,14 +96,15 @@ groupadd kos
 usermod -aG kos dartz
 export SUDO_FORCE_REMOVE=yes
 a(){ apt -yqq "\$@"; }
-a purge sudo&&a update --fix-missing -yqq
+a update --fix-missing -yqq
+a purge sudo -yqq
 a -yqq install clang pkgconf
 rm -rf kos
 git clone 'https://ari-web.xyz/gh/kos'
 cd kos
-vim src/config.h
+sed '/HAVE_ARG/d; /HAVE_PIPE/d' -i src/config.h
 INSTALL_BCOMP=1 INSTALL_MAN=1 USER=root ./scripts/setup.sh
-a autopurge
+a autopurge -yqq
 exit 0
 EOF
     s bash kos.sh
