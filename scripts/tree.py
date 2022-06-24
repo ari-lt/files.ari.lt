@@ -41,16 +41,22 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
     </head>
 
     <body>
-        <h1><a href='https://ari-web.xyz/'>Ari-web</a> file hosting index</h1>
+        <article>
+            <h1><a href='https://ari-web.xyz/'>Ari-web</a> file hosting index</h1>
 
-        <p align='center'>
-            <i>Ignored files: {', '.join(IGNORE_FILES)} | Last built at {check_cmd_output('date').decode()} | <a href='/git'>source code</a></i>
-        </p>
-        <hr/>
+            <header>
+                <nav>
+                    <p align='center'>
+                        <i>Ignored files: {', '.join(IGNORE_FILES)} | Last built at {check_cmd_output('date').decode()} | <a href='/git'>source code</a></i>
+                    </p>
+                    <hr/>
+                <nav>
+            </header>
 
-        <div>
-            %s
-        </div>
+            <main>
+                %s
+            </main>
+        </article>
     </body>
 </html>"""
 
