@@ -90,7 +90,7 @@ EOF
 
     # Misc
 
-    s apt purge update-notifier-common -yqq
+    s apt purge update-notifier-common muon -yqq
 
     # Kos
 
