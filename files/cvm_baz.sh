@@ -7,7 +7,7 @@ main() {
 
     COFFEE="coffee.tty-theme coffee.baz-plugin"
 
-    sed 's/BAZP_NO_ASKCHECK=false/BAZP_NO_ASKCHECK=true/g' -i "$HOME/.config/baz/config.env"
+    sed 's/BAZP_NO_ASKCHECK=false/BAZP_NO_ASKCHECK=true/g; s/BAZP_NO_ASKINST=false/BAZP_NO_ASKINST=true/g' -i "$HOME/.config/baz/config.env"
 
     plugins=''
 
