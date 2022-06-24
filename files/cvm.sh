@@ -65,7 +65,10 @@ EOF
     cp -r dotfiles/dotfiles/config/* ~/.config
 
     # Vim packages
+
+    sed '/colorscheme/d' -i "$HOME/.vim/vimrc"
     vim +PlugUpgrade +PlugUpdate +CocUpdate +qa
+    echo 'colorscheme coffee' >>"$HOME/.vim/vimrc"
 
     # Tmux
 
@@ -109,14 +112,9 @@ exit 0
 EOF
     s bash kos.sh
 
-    cat <<EOF
+    # Bashrc
 
-$(printf '\033[1m')
-**** Add this to the top of bashrc: ****
-****        source ~/head.sh        ****
-$(printf '\033[0m')
-
-EOF
+    sed '1s/^/source \~\/head.sh\n/' -i "$HOME/.bashrc"
 }
 
 main "$@"
