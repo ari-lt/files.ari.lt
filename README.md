@@ -37,3 +37,8 @@ But...
 - Help me remove any illegal or rules evading files because being taken down is not fun
 
 You can host your files by just making a pull request
+
+# Site
+
+The files are locally stored on my machine because of github limitations,
+make an issue if you want any files to be added
