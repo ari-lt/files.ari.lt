@@ -7,3 +7,5 @@
 - github.com.coffee.\*.jpg
 - [baz_setup.sh](/files/baz_setup.sh)
 - [blog.ari-web.xyz-enneagram.png](/files/blog.ari-web.xyz-enneagram.png)
+- [freebsd_syscalls.tbl](/files/freebsd_syscalls.tbl)
+- [openbsd_syscalls.tbl](/files/openbsd_syscalls.tbl)
