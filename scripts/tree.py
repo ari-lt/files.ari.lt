@@ -20,7 +20,7 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="description" content="Ari-web file hosting index">
-        <meta name="keywords" content="website webdev linux programming ari opensource free cdn file files file-hosting file_hosting git github">
+        <meta name="keywords" content="website, webdev, linux, programming, ari, opensource, free, cdn, file, files, file-hosting, file_hosting, git, github">
         <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large, noimageindex"/>
 
         <title>Ari::ari -> Files</title>
