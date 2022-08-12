@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 
+set -e
+
 main() {
     git add .
-    git commit -sam "update @ $(date)"
+    git commit -sa
     git push -u origin "$(git rev-parse --abbrev-ref HEAD)"
 
     ./scripts/netlify.sh

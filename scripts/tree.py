@@ -2,11 +2,12 @@
 """Generate an HTML tree of all files
 """
 
+import json
 import os
 import sys
 import warnings
 from subprocess import check_output as check_cmd_output
-from typing import Tuple
+from typing import List, Tuple
 
 warnings.filterwarnings("error", category=Warning)
 
@@ -61,7 +62,7 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
 </html>"""
 
 
-def generate_tree(path: str, html: str = "") -> str:
+def generate_tree(path: str, html: str = "") -> Tuple[str, List[str]]:
     """Generate a tree in HTML of files in specified path
 
     Parameters
@@ -71,8 +72,11 @@ def generate_tree(path: str, html: str = "") -> str:
 
     Returns
     -------
-    str:The HTML tree
+    html (str): The HTML tree
+    files l(ist[str]): List of all files
     """
+
+    files: List[str] = []
 
     for file in os.listdir(path):
         if file.startswith(".") or file in IGNORE_FILES:
@@ -82,19 +86,27 @@ def generate_tree(path: str, html: str = "") -> str:
 
         if os.path.isdir(rel):
             html += f"<li>{file}/</li><ul>"
-            html += generate_tree(rel)
+            _generated: Tuple[str, List[str]] = generate_tree(rel)
+            files.extend(_generated[1])
+            html += _generated[0]
             html += "</ul>"
         else:
+            files.append(rel.removeprefix("./"))
             html += f"<li><a href='{rel}'>{file}</a></li>"
 
-    return html
+    return html, files
 
 
 def main() -> int:
     """Entry/main function"""
 
+    generated_tree: Tuple[str, List[str]] = generate_tree(".")
+
     with open("index.html", "w", encoding="utf-8") as index:
-        index.write(INDEX_TEMPLATE % (generate_tree(".")))
+        index.write(INDEX_TEMPLATE % (generated_tree[0]))
+
+    with open("files.json", "w") as api_json:
+        json.dump(generated_tree[1], api_json)
 
     return 0
 
