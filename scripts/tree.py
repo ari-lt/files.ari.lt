@@ -34,7 +34,7 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
         <style>
             :root {{ color-scheme: dark; }}
             * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
-            body {{ padding: 2rem; }}
+            body {{ padding: 2rem; max-width: 1100px; margin: auto; }}
             h1 {{ text-align: center; margin: 1em; }}
             li {{ margin: 0.5em; }}
             a {{ text-decoration: none; text-shadow: 0px 0px 6px white; }}
@@ -48,7 +48,9 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
             <header>
                 <nav>
                     <p align='center'>
-                        <i>Ignored files: {', '.join(IGNORE_FILES)} | Last built at {check_cmd_output('date').decode()} | <a href='/git'>source code</a></i>
+                        <i>Ignored files: {', '.join(IGNORE_FILES)} \
+| Last built at {check_cmd_output('date').decode()} \
+| <a href='/git'>source code</a> | <b>*download</b></i>
                     </p>
                     <hr/>
                 <nav>
@@ -92,7 +94,7 @@ def generate_tree(path: str, html: str = "") -> Tuple[str, List[str]]:
             html += "</ul>"
         else:
             files.append(rel.removeprefix("./"))
-            html += f"<li><a href='{rel}'>{file}</a></li>"
+            html += f'<li><a href="{rel}">{file}</a> [<a href="{rel}" download>*{file}</a>]</li>'
 
     return html, files
 
