@@ -43,6 +43,13 @@
 # --------------
 
 [[headers]]
+    for = "/files.json"
+
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "*"
+
+[[headers]]
     for = "/*"
 
     [headers.values]
