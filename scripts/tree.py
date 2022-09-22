@@ -2,6 +2,7 @@
 """Generate an HTML tree of all files
 """
 
+import hashlib
 import json
 import os
 import sys
@@ -109,6 +110,10 @@ def main() -> int:
 
     with open("files.json", "w") as api_json:
         json.dump(generated_tree[1], api_json)
+
+    with open("files.json", "rb") as api_json:
+        with open("files_hash.txt", "w") as api_hash:
+            api_hash.write(hashlib.sha256(api_json.read()).hexdigest())
 
     return 0
 
