@@ -43,6 +43,8 @@ You can host your files by just making a pull request
 The files are locally stored on my machine because of github limitations,
 make an issue if you want any files to be added
 
-# Api
+# API
 
-Just make a request to [/files.json](https://files.ari-web.xyz/files.json) to get a list of all files
+Just make a request to [/files.json](https://files.ari-web.xyz/files.json) to get a list of all files,
+make a request to [/files_json_hash.txt](https://files.ari-web.xyz/files_json_hash.txt)
+to get the validation hash for it

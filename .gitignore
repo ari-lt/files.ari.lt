@@ -2,7 +2,7 @@
 index.html
 files/
 files.json
-files_hash.txt
+files_json_hash.txt
 
 # Local Netlify folder
 .netlify

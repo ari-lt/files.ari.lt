@@ -112,7 +112,7 @@ def main() -> int:
         json.dump(generated_tree[1], api_json)
 
     with open("files.json", "rb") as api_json:
-        with open("files_hash.txt", "w") as api_hash:
+        with open("files_json_hash.txt", "w") as api_hash:
             api_hash.write(hashlib.sha256(api_json.read()).hexdigest())
 
     return 0
