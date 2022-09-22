@@ -50,6 +50,13 @@
         Access-Control-Allow-Methods = "GET"
 
 [[headers]]
+    for = "/files_hash.txt"
+
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
+        Access-Control-Allow-Methods = "GET"
+
+[[headers]]
     for = "/*"
 
     [headers.values]
