@@ -34,7 +34,7 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
 
         <style>
             :root {{ color-scheme: dark; }}
-            * {{ background-color: #262220; color: #f9f6e8; font-family: Hack, hack, monospace, sans, opensans, sans-serif; }}
+            * {{ background-color: #262220; color: #f9f6e8; font-family: sans-serif; }}
             body {{ padding: 2rem; max-width: 1100px; margin: auto; }}
             h1 {{ text-align: center; margin: 1em; }}
             li {{ margin: 0.5em; }}
