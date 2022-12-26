@@ -3,6 +3,7 @@ index.html
 files/
 files.json
 files_json_hash.txt
+.ccls-cache/
 
 # Local Netlify folder
 .netlify

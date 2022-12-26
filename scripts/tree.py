@@ -38,7 +38,8 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
             body {{ padding: 2rem; max-width: 1100px; margin: auto; }}
             h1 {{ text-align: center; margin: 1em; }}
             li {{ margin: 0.5em; }}
-            a {{ text-decoration: none; text-shadow: 0px 0px 6px white; }}
+            a {{ text-decoration: none; color: #cdc4c4; font-style: italic; }}
+            a:focus, a:hover {{ text-decoration: underline; }}
         </style>
     </head>
 
