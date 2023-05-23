@@ -52,7 +52,8 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
                     <p align='center'>
                         <i>Ignored files: {', '.join(IGNORE_FILES)} \
 | Last built at {check_cmd_output('date').decode()} \
-| <a href='/git'>source code</a> | <b>*download</b></i>
+| <a href='/git'>source code</a> | <b>*download</b></i> | \
+visitor <img src="https://server.ari-web.xyz/visit" alt="visitor count">
                     </p>
                     <hr/>
                 <nav>
