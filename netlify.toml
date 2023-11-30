@@ -3,37 +3,37 @@
 
 [[redirects]]
     from = "/git/*"
-    to = "https://ari-web.xyz/gh/files.ari-web.xyz/:splat"
+    to = "https://ari.lt/gh/files.ari.lt/:splat"
     status = 301
     force = true
 
 [[redirects]]
     from = "/favicon.ico"
-    to = "https://ari-web.xyz/favicon.ico"
+    to = "https://ari.lt/favicon.ico"
     status = 200
     force = true
 
 [[redirects]]
     from = "/robots.txt"
-    to = "https://ari-web.xyz/robots.txt"
+    to = "https://ari.lt/robots.txt"
     status = 200
     force = true
 
 [[redirects]]
     from = "/sitemap.xml"
-    to = "https://ari-web.xyz/sitemap.xml"
+    to = "https://ari.lt/sitemap.xml"
     status = 200
     force = true
 
 [[redirects]]
     from = "/netlify.toml"
-    to = "https://ari-web.xyz/404.files.xyz"
+    to = "https://ari.lt/404.files.xyz"
     status = 404
     force = true
 
 [[redirects]]
     from = "/*"
-    to = "https://ari-web.xyz/404.files.xyz"
+    to = "https://ari.lt/404.files.xyz"
     status = 404
     force = false
 

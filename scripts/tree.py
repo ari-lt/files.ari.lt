@@ -45,7 +45,7 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
 
     <body>
         <article>
-            <h1><a href='https://ari-web.xyz/'>Ari-web</a> file hosting index</h1>
+            <h1><a href='https://ari.lt/'>Ari-web</a> file hosting index</h1>
 
             <header>
                 <nav>
@@ -53,7 +53,7 @@ INDEX_TEMPLATE: str = f"""<!DOCTYPE html>
                         <i>Ignored files: {', '.join(IGNORE_FILES)} \
 | Last built at {check_cmd_output('date').decode()} \
 | <a href='/git'>source code</a> | <b>*download</b></i> | \
-visitor <img src="https://server.ari-web.xyz/visit" alt="visitor count">
+visitor <img src="https://server.ari.lt/visit" alt="visitor count">
                     </p>
                     <hr/>
                 <nav>
