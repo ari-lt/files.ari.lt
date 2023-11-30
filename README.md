@@ -2,10 +2,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Maintained-Yes-green?color=red&style=flat-square">
-  <img src="https://img.shields.io/github/last-commit/TruncatedDinosour/files.ari.lt?color=red&style=flat-square">
-  <img src="https://img.shields.io/github/repo-size/TruncatedDinosour/files.ari.lt?color=red&style=flat-square">
-  <img src="https://img.shields.io/github/issues/TruncatedDinosour/files.ari.lt?color=red&style=flat-square">
-  <img src="https://img.shields.io/github/stars/TruncatedDinosour/files.ari.lt?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/last-commit/ari-lt/files.ari.lt?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/repo-size/ari-lt/files.ari.lt?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/issues/ari-lt/files.ari.lt?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/stars/ari-lt/files.ari.lt?color=red&style=flat-square">
 </p>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45b95d96-66aa-4e1d-b966-ce8fa2ed3188/deploy-status)](https://app.netlify.com/sites/files-ari-web-xyz/deploys)

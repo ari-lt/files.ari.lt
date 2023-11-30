@@ -3,7 +3,7 @@
 
 [[redirects]]
     from = "/git/*"
-    to = "https://ari.lt/gh/files.ari.lt/:splat"
+    to = "https://ari.lt/lh/files.ari.lt/:splat"
     status = 301
     force = true
 
