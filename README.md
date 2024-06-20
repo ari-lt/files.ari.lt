@@ -1,3 +1,4 @@
+# This repository has been migrated to the self-hosted ari-web Forgejo instance: <https://git.ari.lt/ari.lt/files.ari.lt>
 # This repository has been migrated to the self-hosted ari-web Forgejo instance: <https://git.ari.lt/ari/files.ari.lt>
 # [files.ari.lt](https://files.ari.lt)
 
